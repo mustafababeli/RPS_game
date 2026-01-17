@@ -8,13 +8,11 @@
 </head>
 <body>
 <div class="main">
+
     <div class="header">
         <h1>ROCK PAPER SCISSORS</h1>
-
-
-
-
     </div>
+
     <div class="score">
 
         <div class="humanScore">
@@ -26,14 +24,16 @@
 
     </div>
 
+    <div class="resultMessage">Make your choice!</div>
+
     <div class="buttons">
-        <button id="firstButton">Rock</button>
-        <button id="secondButton">Paper</button>
-        <button id="thirdButton">Scissors</button>
-        <img class="rock" src="/rock.png">
-        <img class="paper" src="/paper.png">
-        <img class="scissors" src="/scissors.png">
+        <img class="choice" data-choice="rock" src="assets/rock.png" alt="Rock">
+        <img class="choice" data-choice="paper" src="assets/paper.png" alt="Paper">
+        <img class="choice" data-choice="scissors" src="assets/scissors.png" alt="Scissors">
+    
     </div>
+
+    <button class="playAgainButton">Play Again</button>
 
 
 </div>

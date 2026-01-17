@@ -1,11 +1,8 @@
-.main {
-    
-    
-}
+
 html, body {
     height: 100%;
     margin: 0;
-    background-color: #adc2d0; /* same as .main */
+     background-image: linear-gradient(to right bottom, #791f50, #963d75, #b15b9d, #ca7ac7, #e19bf3); /* same as .main */
 }
 
 .header {
@@ -13,20 +10,26 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    color: white;
+  
 
+}
+  .header h1 {
+    margin: 0;           /* remove default browser margins */
+    text-align: center;  /* ensure text inside h1 is centered */
+    font-size: 5vw;      /* responsive font size that scales on mobile */
+}
 .buttons {
     display: flex;
     justify-content: center;
-    min-height: 200px;
     align-items: center;
-    
+    flex-wrap: wrap;   /* allows images to wrap on smaller screens */
+    gap: 15px;         /* space between buttons */
+    padding: 10px;
 }
-#firstButton, #secondButton, #thirdButton {
-    height: 90px;
-    width: 180px;
-    
-}
+
+
+
 .score {
     display: flex;
     justify-content: center;
@@ -38,7 +41,7 @@ html, body {
 .humanScore, .computerScore {
 
 background-color: transparent;
-border: 1px solid black;
+border: 1px solid rgb(255, 255, 255);
 border-radius: 10px;
 height: 60px;
 width: 170px;
@@ -47,10 +50,79 @@ font-family: 'Georgia', serif;
 display: flex;
 justify-content: center;
 align-items: center;
+color: white;
 
 
 }
+.choice {
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    width: 30vw;    /* 30% of viewport width */
+    max-width: 150px; /* don’t get too big on large screens */
+    height: auto;     /* keeps aspect ratio */
+}
 
-.body {
-    background-image: linear-gradient(to right bottom, #791f50, #963d75, #b15b9d, #ca7ac7, #e19bf3);
+
+.choice:hover {
+  transform: scale(1.1);
+}
+
+.choice:active {
+  transform: scale(0.95);
+}
+.resultMessage {
+    margin: 20px auto; /* automatically centers */
+    max-width: 90%;    /* limits width on large screens */
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    font-family: 'Georgia', serif;
+     font-size: 4vw; /* scales with screen width */
+}
+
+
+.playAgainButton {
+    display: none;           /* hidden initially */
+    margin: 20px auto;
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: white;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    transition: transform 0.2s;
+}
+
+.playAgainButton:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 500px) {
+    .score {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+    }
+
+    .humanScore, .computerScore {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .playAgainButton {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+      .header {
+        height: auto;
+        padding: 10px;
+    }
+    .header h1 {
+        font-size: 6vw;  /* slightly smaller font on tiny screens */
+    }
 }
