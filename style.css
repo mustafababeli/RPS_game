@@ -1,0 +1,56 @@
+.main {
+    
+    
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #adc2d0; /* same as .main */
+}
+
+.header {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    align-items: center;
+    
+}
+#firstButton, #secondButton, #thirdButton {
+    height: 90px;
+    width: 180px;
+    
+}
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    gap: 50px;
+    
+}
+.humanScore, .computerScore {
+
+background-color: transparent;
+border: 1px solid black;
+border-radius: 10px;
+height: 60px;
+width: 170px;
+font-size: 20px;
+font-family: 'Georgia', serif;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.body {
+    background-image: linear-gradient(to right bottom, #791f50, #963d75, #b15b9d, #ca7ac7, #e19bf3);
+}
